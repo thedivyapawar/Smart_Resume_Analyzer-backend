@@ -1,0 +1,72 @@
+
+
+DIVYA PAWAR
+Mumbai, India
+Ó
++91-9359568259
+R
+heydivyapawar@gmail.com
+°
+Linkedln
+
+Github
+
+Portfolio
+TECHNICAL SKILLS
+Programming Languages:JavaScript, Java, Python
+Frameworks and Libraries:ReactJS, Redux-Toolkit, ExpressJS, NodeJS, MongoDB, SQL, TailwindCSS,
+AntDesign, SCSS, CSS, HTML
+Version Control:Git, Github
+PROJECTS
+Resonate - An Ecommerce Application
+W
+|ReactJS, ExpressJS, NodeJS, MongoDB|Live site
+•
+Developed a seamless web platform with features likeAPI integration, dynamic URLs,and an efficient
+add-to-cart system, providing a smooth and intuitive shopping experience.
+•
+Enhanced application performance throughCode SplittingandLazy Loading.
+ChatDoc - Streamlit Application
+W
+|Python, Streamlit, Firebase|Github
+•
+Developed ChatDoc, a web application enabling interactive querying of PDF documents using theGoogle
+Gemini APIfor NLP capabilities.
+•
+Implemented a dynamic and intuitive user interface usingStreamlit, engaging animations, and functional design.
+FitNexus - A Fitness Assistance
+W
+|ReactJS, RapidAPI, Bootstrap|Live Site
+•
+Developed a dynamic web application that integrates real-time fitness data throughRapid API service,
+offering users valuable insights.
+•
+Implemented advanced UI features such as theShimmer Effectfor smooth loading transitions andDynamic Routing
+to enhance website performance.
+EXPERIENCE
+ReactJS Developer @Codesis - InternshipMarch 2025 - Present
+∗Developed theAlpha Market Admin Dashboardto deliver comprehensivecustomer insights, tracking
+user activity and transactiontrends on there business platform.
+∗Engineereddynamic, reusable componentswithin an active codebase, improvingdevelopment efficiency
+across different frontend projects.
+∗Solvedoptimization challengeby implementingcode splitting, reducing application load time and
+improving performance.
+Frontend Developer @Resmic - InternshipDec 2024 - Feb 2025
+•
+Developed theResmic Pro Dashboardfrom scratch, integratingsecure authentication, interactive
+charts visualizations, andadvanced table features (filtering, pagination, Excel export)
+•
+Optimized performance withlazy loadingadhering to thesingle responsibility principleand following
+MVC architecturefor project.
+ACHIEVEMENTS
+•
+Served as theWeb Masterfor my college community, CCC (Code Crux Community)
+•
+Mentored juniorsby providing guidance and technical support for their college project.
+EDUCATION
+SJCHS, University of Mumbai2021 – 2024
+BS in Computer Science -CGPA-9.3Mumbai, India
+SDSM , Mumbai Divisional Board2018 – 2020
+Higher Secondary Certificate -Percentage-66.15%Mumbai, India
+C.T.E.S English Medium School, Mumbai Divisional Board2016 – 2018
+Secondary School Certificate -Percentage-87.40%Mumbai, India
