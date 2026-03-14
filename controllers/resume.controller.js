@@ -1,7 +1,7 @@
 // Controller logic for uploading, fetching and updating resumes
 import pdfParse from "pdf-parse";
 import { pool } from "../services/db.js";
-import { extractWithOpenAI } from "../services/openai.service.js";
+import { extractResume } from "../services/ai.service.js";
 
 // Upload resume (file or raw text)
 export const uploadResumeHandler = async (req, res) => {
@@ -28,19 +28,26 @@ export const uploadResumeHandler = async (req, res) => {
       return res.status(400).json({ error: "No resume provided" });
     }
 
-    // Extract structured info using AI
-    const parsedData = await extractWithOpenAI(extractedText);
+    const trimmed = (extractedText || "").trim();
+    if (!trimmed) {
+      return res.status(400).json({ error: "Resume text is empty. Paste text or use a PDF with selectable text." });
+    }
 
-    // Save to database with corrected_data same as parsedData
+    // Extract structured info using Gemini
+    const parsedData = await extractResume(trimmed);
+
+    // Ensure valid JSON for DB (avoid undefined/non-serializable values)
+    const parsedJson = JSON.stringify(parsedData && typeof parsedData === "object" ? parsedData : { raw: String(parsedData) });
+
+    // Save to database
     const result = await pool.query(
-      "INSERT INTO resumes (original_text, parsed_data, corrected_data) VALUES ($1, $2, $2) RETURNING *",
-      [extractedText, parsedData]
+      "INSERT INTO resumes (original_text, parsed_data, corrected_data) VALUES ($1, $2::jsonb, $2::jsonb) RETURNING *",
+      [trimmed, parsedJson]
     );
 
     res.status(200).json(result.rows[0]);
   } catch (err) {
     console.error("❌ Upload error:", err.message);
-    res.status(500).json({ error: "Failed to upload resume" });
   }
 };
 
